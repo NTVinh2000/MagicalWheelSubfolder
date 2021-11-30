@@ -201,7 +201,7 @@ class GUI:
 
     @staticmethod
     def pause_screen(win, base_font):
-        CENTER_X = WIDTH - len(PAUSE_TEXT)*AVG_TEXT_SIZE
+        CENTER_X = WIDTH - len(PAUSE_TEXT)*AVG_TEXT_SIZE*1.3
         CENTER_Y = 0
 
         text = base_font.render(PAUSE_TEXT, True, WHITE)
@@ -332,20 +332,20 @@ class GUI:
                 # Enter Letter
                 GUI.draw_title_at(WIN, base_font, 'Guess letter:', WHITE, (0, 3 * HEIGHT / 4))
                 GUI.flip_cursor(WIN, input_size,
-                                (len('Guess letter:') * AVG_TEXT_SIZE, TEXT_SIZE + 3 * HEIGHT / 4), cursorPos, flipCursor)
+                                (len('Guess letter:') * AVG_TEXT_SIZE*1.2, TEXT_SIZE + 3 * HEIGHT / 4), cursorPos, flipCursor)
                 GUI.draw_text_at(WIN, GUI.user_text, base_font,
-                                 (len('Guess letter:') * AVG_TEXT_SIZE, 3 * HEIGHT / 4))
+                                 (len('Guess letter:') * AVG_TEXT_SIZE*1.2, 3 * HEIGHT / 4))
             elif screen_mode == STATE_PLAY_WORD:
                 # Enter Letter
                 GUI.draw_title_at(WIN, base_font, 'Letter choice:', WHITE, (0, 3 * HEIGHT / 4))
                 GUI.flip_cursor(WIN, 1,
-                                (len('Letter choice:') * AVG_TEXT_SIZE, TEXT_SIZE + 3 * HEIGHT / 4))
+                                (len('Letter choice:') * AVG_TEXT_SIZE*1.2, TEXT_SIZE + 3 * HEIGHT / 4))
                 GUI.draw_text_at(WIN, model.guessLetter, base_font,
-                                 (len('Letter choice:') * AVG_TEXT_SIZE, 3 * HEIGHT / 4))
+                                 (len('Letter choice:') * AVG_TEXT_SIZE*1.2, 3 * HEIGHT / 4))
 
                 # Enter word
                 GUI.draw_title_at(WIN, base_font, 'Guess full keyword:', WHITE, (0, 3 * HEIGHT / 4 + TEXT_SIZE * 2))
                 GUI.flip_cursor(WIN, input_size,
-                                (len('Guess full keyword:') * AVG_TEXT_SIZE, 3 * HEIGHT / 4 + TEXT_SIZE * 3), cursorPos, flipCursor)
+                                (len('Guess full keyword:') * AVG_TEXT_SIZE*1.2, 3 * HEIGHT / 4 + TEXT_SIZE * 3), cursorPos, flipCursor)
                 GUI.draw_text_at(WIN, GUI.user_text, base_font,
-                                 (len('Guess full keyword:') * AVG_TEXT_SIZE, 3 * HEIGHT / 4 + + TEXT_SIZE * 2))
+                                 (len('Guess full keyword:') * AVG_TEXT_SIZE*1.2, 3 * HEIGHT / 4 + + TEXT_SIZE * 2))
